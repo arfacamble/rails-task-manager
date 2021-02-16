@@ -6,6 +6,7 @@
     <% else %>
       <li><input type="checkbox" disabled><%= link_to task.title, task_path(task) %></li>
     <% end %>
+    <%= link_to '🗑', task_path(task), method: :delete, data: { confirm: "Are you sure?" } %>
   <% end %>
 </ul>
 <%= link_to "Add a new task", tasks_new_path %>
